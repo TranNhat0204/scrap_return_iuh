@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_production_lot_view_tree_iuh_inherit" model="ir.ui.view">
+            <field name="name">stock.production.lot.tree.inherit.product.expiry.iuh</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="product_qty" invisible="0"/>
+                    <field name="time_left" invisible="0"/>
+                    <field name="product_expiry_alert" invisible="0"/>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="stock_production_lot_view_form_iuh_inherit" model="ir.ui.view">
+            <field name="name">stock.production.lot.form.view.iuh.inherit</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_view_so']" position="before">
+                    <button class="oe_stat_button" name="button_scrap_iuh"
+                            type="object" icon="fa-trash" help="Scrap"
+                            attrs="{'invisible':[('product_expiry_alert','=', False)]}"
+                            groups="base.group_user"
+                    >
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">Scrap</span>
+                        </div>
+
+                    </button>
+                    <button class="oe_stat_button" name="button_scrap_1_iuh"
+                            type="object" icon="fa-trash" help="Scrap"
+                            attrs="{'invisible':[('product_expiry_alert','=', True)]}"
+                            groups="base.group_user"
+                            confirm="The shipment still has an expiry date, do you want to continue?"
+                        >
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">Scrap</span>
+                        </div>
+                    </button>
+                    <button class="oe_stat_button" name="button_return_iuh"
+                            type="object" icon="fa-truck">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">Return</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="before">
+                    <field name="time_left" invisible="0"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="alert_date_iuh_search_view" model="ir.ui.view">
+            <field name="name">alert.date.iuh.view.search</field>
+            <field name="model">stock.production.lot</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="group_alert_date" string="Alert Date" icon="terp-partner" context="{'group_by': 'expiration_date:day'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="iuh_seri_act_window" model="ir.actions.act_window">
+            <field name="name">IUH lot/se-ri number</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.production.lot</field>
+            <field name="search_view_id" ref="alert_date_iuh_search_view"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="iuh_seri_act_window"
+                  id="action_production_lot_form_seri"
+                  parent="stock.menu_stock_inventory_control"
+                  groups="stock.group_production_lot"
+                  sequence="104"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_quality_form_view" model="ir.ui.view">
+            <field name="name">product.quality.view.form</field>
+            <field name="model">product.quality</field>
+            <field name="arch" type="xml">
+                <form string="Tình trạng sản phẩm lưu kho">
+                    <header>
+                        <button name="to_confirm"
+                                string="Confirm"
+                                type="object"
+                                class="oe_highlight"
+                                attrs="{'invisible':[('state_warning','in',('confirm','moved'))]}"
+                                confirm="Are you sure you want to confirm this report?"
+                                groups="stock.group_stock_manager"
+                        />
+                        <button name="to_move"
+                                string="Move Report"
+                                type="object"
+                                class="oe_highlight"
+                                attrs="{'invisible':[('state_warning','in',('unconfirm','moved'))]}"
+                                confirm="Are you sure you want to move this report to sales department?"
+                                groups="stock.group_stock_manager"
+                        />
+                        <button name="to_scrap"
+                                string="Scrap"
+                                type="object"
+                                class="oe_highlight"
+                                groups="stock.group_stock_manager"
+                                attrs="{'invisible':[('state_warning','in',('unconfirm','moved'))]}"
+                        />
+                        <button name="to_return"
+                                string="Return"
+                                type="object"
+                                class="oe_highlight"
+                                attrs="{'invisible':[('state_warning','in',('unconfirm','moved'))]}"
+                                groups="stock.group_stock_manager"
+                        />
+                        <button name="to_set_price"
+                                string="Update Price list"
+                                type="object"
+                                class="oe_highlight"
+                                attrs="{'invisible':[('state_warning','not in','moved')]}"
+                                groups="sales_team.group_sale_salesman"
+                        />
+                        <field name="state_warning" widget = "statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="product_id"/>
+                            <h1>
+                                <field name="product_id" string="False"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="lot_id"/>
+                                <field name="user_id"/>
+                                <field name="product_qty"/>
+                                <field name="product_qty_problem"/>
+                                <field name="time_left"/>
+                                <field name="product_expiry_alert" invisible="1"/>
+                                <span class="badge badge-danger" attrs="{'invisible': [('product_expiry_alert', '=', False)]}">Expiration Alert</span>
+                            </group>
+                            <group>
+                                <field string="" name="image_field" widget="image" class="oe_avatar" options="{&quot;zoom&quot;: true}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Lo/Se-ri Information" name="lo_seri_information">
+                                <group>
+                                    <group>
+                                        <field name="expiration_date"/>
+                                        <field name="removal_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="use_date"/>
+                                        <field name="alert_date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Actual Image" name="actual_image">
+                                 <group>
+                                     <field name="image" widget="many2many_binary"/>
+                                 </group>
+                            </page>
+                            <page string="Notes" name="note">
+                                 <group>
+                                     <field name="notes"/>
+                                 </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_quality_tree_view" model="ir.ui.view">
+            <field name="name">product.quality.view.tree</field>
+            <field name="model">product.quality</field>
+            <field name="arch" type="xml">
+                <tree string="Cảnh báo tình trạng sản phẩm">
+                    <field name="product_id"/>
+                    <field name="lot_id"/>
+                    <field name="product_qty_problem"/>
+                    <field name="notes"/>
+                    <field name="state_warning"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_quality_act_window" model="ir.actions.act_window">
+            <field name="name">Warning Quality Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.quality</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="product_quality_menu"
+                  parent="stock.menu_stock_inventory_control"
+                  groups="base.group_user"
+                  sequence="109"
+                  action="product_quality_act_window"
+        />
+    </data>
+</odoo>

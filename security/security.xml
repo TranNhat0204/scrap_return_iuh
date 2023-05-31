@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.module.category" id="module_warning_product_iuh_inventory">
+            <field name="name">Warning Product</field>
+            <field name="sequence">1</field>
+        </record>
+
+    	<record id="group_inventory_iuh" model="res.groups">
+            <field name="name">Inventory</field>
+            <field name="category_id" ref="module_warning_product_iuh_inventory"/>
+        </record>
+
+        <record id="group_sales_iuh" model="res.groups">
+            <field name="name">Sales</field>
+            <field name="category_id" ref="module_warning_product_iuh_inventory"/>
+        </record>
+
+        <record id="warning_product_employee_sale_rule" model="ir.rule">
+            <field name="name">Warning Product Sale Employee Rule</field>
+            <field name="model_id" ref="scrap_return_iuh.model_product_quality"/>
+            <field name="domain_force">[('state_warning','=','moved')]</field>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+            <field name="groups" eval="[(4, ref('group_sales_iuh'), ref('sales_team.group_sale_salesman_all_leads'), ref('sales_team.group_sale_salesman'))]"/>
+        </record>
+        <record id="warning_product_employee_inventory_rule" model="ir.rule">
+            <field name="name">Warning Product Inventory Employee Rule</field>
+            <field name="model_id" ref="scrap_return_iuh.model_product_quality"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="groups" eval="[(4, ref('group_inventory_iuh'), ref('stock.group_stock_manager'), ref('stock.group_stock_user'))]"/>
+        </record>
+
+
+    </data>
+</odoo>

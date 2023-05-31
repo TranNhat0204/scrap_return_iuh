@@ -1,0 +1,311 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* scrap_return_iuh
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-30 21:08+0000\n"
+"PO-Revision-Date: 2023-05-30 21:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid ""
+"<span class=\"badge badge-danger\" attrs=\"{'invisible': "
+"[('product_expiry_alert', '=', False)]}\">Expiration Alert</span>"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.stock_production_lot_view_form_iuh_inherit
+msgid "<span class=\"o_stat_text\">Return</span>"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.stock_production_lot_view_form_iuh_inherit
+msgid "<span class=\"o_stat_text\">Scrap</span>"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Actual Image"
+msgstr "Hình ảnh thực tế"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__alert_date
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.alert_date_iuh_search_view
+msgid "Alert Date"
+msgstr "Ngày cảnh báo"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Are you sure you want to confirm this report?"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Are you sure you want to move this report to sales department?"
+msgstr "Bạn có chắc chắn muốn chuyển báo cáo này đến bộ phận bán hàng không?"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__company_id
+msgid "Company"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields.selection,name:scrap_return_iuh.selection__product_quality__state_warning__confirm
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__create_uid
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__user_id
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_tree_view
+msgid "Cảnh báo tình trạng sản phẩm"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,help:scrap_return_iuh.field_product_quality__alert_date
+msgid ""
+"Date to determine the expired lots and serial numbers using the filter "
+"\"Expiration Alerts\"."
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__display_name
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_stock_production_lot__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__expiration_date
+msgid "Expiration Date"
+msgstr "Ngày hết hạn"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "False"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__id
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_stock_production_lot__id
+msgid "ID"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.actions.act_window,name:scrap_return_iuh.iuh_seri_act_window
+#: model:ir.ui.menu,name:scrap_return_iuh.action_production_lot_form_seri
+msgid "IUH lot/se-ri number"
+msgstr "Lô/sê-ri IUH"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__image
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__image_field
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: scrap_return_iuh
+#: model:res.groups,name:scrap_return_iuh.group_inventory_iuh
+msgid "Inventory"
+msgstr "NV Kho"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality____last_update
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_stock_production_lot____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: code:addons/scrap_return_iuh/models/product_quality.py:0
+#, python-format
+msgid "ListPrice"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Lo/Se-ri Information"
+msgstr "Thông tin lô/sê-ri"
+
+#. module: scrap_return_iuh
+#: model:ir.model,name:scrap_return_iuh.model_stock_production_lot
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__lot_id
+msgid "Lot/Serial"
+msgstr "Lô/Sê-ri"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Move Report"
+msgstr "Chuyển sang SALES"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields.selection,name:scrap_return_iuh.selection__product_quality__state_warning__moved
+msgid "Moved"
+msgstr "Đã chuyển"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__notes
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__product_qty_problem
+msgid "Number of problem products"
+msgstr "Số lượng sản phẩm có vấn đề"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__product_id
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_stock_production_lot__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__product_expiry_alert
+msgid "Product Expiry Alert"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__product_qty
+msgid "Product Quantity"
+msgstr "Số lượng sản phẩm"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__removal_date
+msgid "Removal Date"
+msgstr "Ngày loại bỏ"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Return"
+msgstr "Trả hàng"
+
+#. module: scrap_return_iuh
+#: code:addons/scrap_return_iuh/models/product_quality.py:0
+#: code:addons/scrap_return_iuh/models/stock_production_lot.py:0
+#, python-format
+msgid "Returned Picking"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:res.groups,name:scrap_return_iuh.group_sales_iuh
+msgid "Sales"
+msgstr "NV Bán hàng"
+
+#. module: scrap_return_iuh
+#: code:addons/scrap_return_iuh/models/product_quality.py:0
+#: code:addons/scrap_return_iuh/models/stock_production_lot.py:0
+#: code:addons/scrap_return_iuh/models/stock_production_lot.py:0
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.stock_production_lot_view_form_iuh_inherit
+#, python-format
+msgid "Scrap"
+msgstr "Phế liệu"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__state_warning
+msgid "State Warning"
+msgstr "Trạng thái cảnh báo"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,help:scrap_return_iuh.field_product_quality__product_expiry_alert
+msgid "The Expiration Date has been reached."
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.stock_production_lot_view_form_iuh_inherit
+msgid "The shipment still has an expiry date, do you want to continue?"
+msgstr "Lô hàng vẫn còn hạn sử dụng, bạn có muốn tiếp tục không?"
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,help:scrap_return_iuh.field_product_quality__expiration_date
+msgid ""
+"This is the date on which the goods with this Serial Number may become "
+"dangerous and must not be consumed."
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,help:scrap_return_iuh.field_product_quality__removal_date
+msgid ""
+"This is the date on which the goods with this Serial Number should be "
+"removed from the stock. This date will be used in FEFO removal strategy."
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,help:scrap_return_iuh.field_product_quality__use_date
+msgid ""
+"This is the date on which the goods with this Serial Number start "
+"deteriorating, without being dangerous yet."
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__time_left
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_stock_production_lot__time_left
+msgid "Time Left of Product"
+msgstr "Thời gian còn lại"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Tình trạng sản phẩm lưu kho"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields.selection,name:scrap_return_iuh.selection__product_quality__state_warning__unconfirm
+msgid "Unconfimred"
+msgstr "Chưa xác nhận"
+
+#. module: scrap_return_iuh
+#: model_terms:ir.ui.view,arch_db:scrap_return_iuh.product_quality_form_view
+msgid "Update Price list"
+msgstr ""
+
+#. module: scrap_return_iuh
+#: model:ir.model.fields,field_description:scrap_return_iuh.field_product_quality__use_date
+msgid "Use Date"
+msgstr "Tốt nhất trước ngày"
+
+#. module: scrap_return_iuh
+#: model:ir.module.category,name:scrap_return_iuh.module_warning_product_iuh_inventory
+msgid "Warning Product"
+msgstr "Cảnh báo sản phẩm"
+
+#. module: scrap_return_iuh
+#: model:ir.actions.act_window,name:scrap_return_iuh.product_quality_act_window
+#: model:ir.ui.menu,name:scrap_return_iuh.product_quality_menu
+msgid "Warning Quality Product"
+msgstr "Cảnh báo chất lượng sản phẩm"
+
+#. module: scrap_return_iuh
+#: model:ir.model,name:scrap_return_iuh.model_product_quality
+msgid "product.quality"
+msgstr ""
